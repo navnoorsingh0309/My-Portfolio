@@ -22,10 +22,10 @@ const projects = [
   {
     id: "3",
     title: "BOAA Website",
-    img: "/Projects/3.png",
+    img: "/Projects/3.jpeg",
     des: "I independently designed and developed the website for the Board of Academic Affairs at IIT Ropar using HTML, CSS, and Vanilla JavaScript. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quia recusandae nostrum id dolorem labore ipsum accusamus sequi magnam, optio praesentium inventore sapiente minima consequatur delectus temporibus dignissimos. Similique doloribus est commodi!",
     link: "https://iitrpr.ac.in/boaa",
-    iconLists: ["/stack/HTML.png", "/stack/CSS.png", "/stack/js.png"]
+    iconLists: ["/stack/html.png", "/stack/CSS.png", "/stack/js.png"]
   },
   {
     id: "4",
@@ -49,7 +49,7 @@ const projects = [
     img: "/Projects/6.png",
     des: "A Simple Chat Room which uses TCP service to convey messages and uses MongoDB for login and Sign Up purpose. It also utlitizes multithreading to support multiple requests at the same time. Sign Up features is also there to add new users and when one user left the chat, it automatically get deleted from server broadcasting channel.",
     link: "https://github.com/navnoorsingh0309/TCP_Client_Server",
-    iconLists: ["/stack/python.png", "/stack/mongo.png"]
+    iconLists: ["/stack/python.png", "/stack/mongo.jpg"]
   },
   {
     id: "7",
