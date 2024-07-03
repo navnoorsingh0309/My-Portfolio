@@ -1,6 +1,7 @@
 import About from "@/components/about";
 import { FlipWords } from "@/components/flip-words";
 import { NavBar } from "@/components/navbar";
+import Projects from "@/components/projects";
 import Image from "next/image";
 
 export default function Home() {
@@ -8,11 +9,11 @@ export default function Home() {
     "A Software Developer",
     "A Machine Learning Enthusiast",
     "A Business Enthusiast",
-    "Feel Free to conact me :)",
+    "Feel Free to contact me :)",
   ];
   return (
-    <div className="flex flex-col justify-center items-center">
-      <div className="flex flex-col gap-2 w-screen h-screen px-5 sm:px-10 bg-blue-50/10 text-center mx-auto items-center">
+    <div className="flex flex-col justify-center items-center bg-blue-50/20">
+      <div className="flex flex-col gap-2 w-screen h-screen px-5 sm:px-10 bg-transparent text-center mx-auto items-center">
         <NavBar />
 
         {/* Tech Stack */}
@@ -41,12 +42,13 @@ export default function Home() {
         </div>
 
         {/* Greetings */}
-        <div className="flex flex-col space-y-4 justify-center items-center h-screen text-xl md:text-5xl font-bold absolute">
+        <div className="flex flex-col space-y-2 md:space-y-4 justify-center items-center h-screen text-xl md:text-5xl font-bold absolute">
           <h1 className="text-[#FFD700]">Hi, I am Navnoor 👋</h1>
           {<FlipWords words={words} />}
         </div>
       </div>
       <About />
+      <Projects/>
     </div>
   );
 }

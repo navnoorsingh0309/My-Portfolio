@@ -5,6 +5,7 @@ import { ThemeProvider } from "./provider";
 import { WavyBackground } from "@/components/wavy-background";
 import { Spotlight } from "@/components/spotlight";
 import './fonts.css'
+import { cn } from "@/utils/cn";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={cn(inter.className)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
