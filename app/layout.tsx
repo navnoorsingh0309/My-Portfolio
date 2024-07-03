@@ -28,10 +28,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Spotlight
-            className="absolute top-40 left-0 md:left-60 md:-top-20 hidden sm:flex"
+            className="absolute top-40 left-0 md:left-60 md:-top-20 hidden lg:flex"
             fill="white"
           />
-          <WavyBackground className="mx-auto w-full h-full">
+          <WavyBackground className="mx-auto">
             {children}
           </WavyBackground>
         </ThemeProvider>

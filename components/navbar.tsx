@@ -42,16 +42,16 @@ export const NavBar = () => {
           y: -100,
         }}
         animate={{
-          y: visible ? 40 : -100,
+          y: visible ? 20 : -100,
           opacity: visible ? 1 : 0,
         }}
         transition={{
           duration: 0.2,
         }}
-        className="flex flex-row gap-8 mx-auto border border-white/10 rounded-lg z-[100] px-8 py-4 bg-blue-50/5"
+        className="flex flex-row gap-4 sm:gap-8 mx-auto border border-white/10 rounded-lg z-[100] px-8 py-2 sm:py-4 bg-blue-50/5"
       >
         {navItems.map((item: any, index: any) => (
-          <Link href="" className="hover:text-[#ffd700]">
+          <Link href="" className="hover:text-[#ffd700] text-[8px] sm:text-xs md:text-md lg:text-lg">
             {item}
           </Link>
         ))}
