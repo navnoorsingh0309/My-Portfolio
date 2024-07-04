@@ -155,7 +155,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <div className="flex flex-col justify-center space-y-4 items-center bg-transparent w-full p-4 px-8 lg:px-60 xl:px-72 mt-[100px]">
+    <div className="flex flex-col justify-center space-y-4 items-center bg-transparent w-full p-4 px-8 lg:px-60 xl:px-72 mt-[200px]">
       <h1
         className="text-5xl flex"
         style={{ fontFamily: "GaMaamli, sans-serif" }}
@@ -163,7 +163,7 @@ const Experience = () => {
         My &nbsp; <p className="text-[#ffd700]">Experience</p>
       </h1>
       {/* Tech Stack */}
-      <div className="w-full text-center md:text-left pt-20">
+      <div className="w-full text-center md:text-left pt-10">
         <h1 className="text-3xl">My Tech Stack</h1>
         <div className="mt-16 flex flex-wrap justify-center gap-10 md:gap-24">
           {skills.map((skill) => (

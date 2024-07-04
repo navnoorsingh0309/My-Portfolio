@@ -67,18 +67,34 @@ const projects = [
     link: "https://github.com/navnoorsingh0309/Gesture-Drawing",
     iconLists: ["/stack/python.png", "/stack/tensor-flow.png"]
   },
+  {
+    id: "9",
+    title: "Lempel-Ziv-Welch Compression",
+    img: "/Projects/9.png",
+    des: "LZW is a compression algorithm that is table-based lookup algorithm to remove duplicate data and compress original file to a smaller size. This is the implemented of similar algorithm in C++;",
+    link: "https://github.com/navnoorsingh0309/Data_Compressiong_LZW",
+    iconLists: ["/stack/C.png"]
+  },
+  {
+    id: "10",
+    title: "Packet Sniffer",
+    img: "/Projects/10.jpg",
+    des: "This script sniffers packets through a network and inspects as they traverse a network. This script is made using kali linux and it will work on on linux OS. This can be used in real life to observe and manage network trafficking.",
+    link: "https://github.com/navnoorsingh0309/Packet-Sniffer",
+    iconLists: ["/stack/python.png"]
+  }
 ];
 
 const Projects = () => {
   return (
-    <div className="flex flex-col justify-center space-y-4 items-center bg-transparent w-full p-4 px-[30px] sm:px-[70px]">
+    <div className="flex flex-col justify-center space-y-4 items-center bg-transparent w-full p-4 px-[30px] sm:px-[70px] mt-[100px]">
       <h1
         className="text-5xl flex"
         style={{ fontFamily: "GaMaamli, sans-serif" }}
       >
         My &nbsp; <p className="text-[#ffd700]">Projects</p>
       </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-y-40 gap-x-24 pt-20">
+      <div className="flex flex-wrap items-center justify-center p-4 gap-y-40 gap-x-24 pt-10 sm:pt-20">
         {projects.map((item) => (
           <div
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
