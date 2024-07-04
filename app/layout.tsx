@@ -6,7 +6,8 @@ import { WavyBackground } from "@/components/wavy-background";
 import { Spotlight } from "@/components/spotlight";
 import './fonts.css'
 import { cn } from "@/libs/utils";
-import { NavBar } from "@/components/navbar";
+import './styles.css'
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,6 +38,7 @@ export default function RootLayout({
             {children}
           </WavyBackground>
         </ThemeProvider>
+        <Toaster />
       </body>
     </html>
   );

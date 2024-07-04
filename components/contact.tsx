@@ -1,11 +1,14 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { toast } from "sonner"
+
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [sending, setSending] = useState(false);
+
   useEffect(() => {
     if (sending == false)
       return;
@@ -20,6 +23,7 @@ const Contact = () => {
     setName("");
     setEmail("");
     setMessage("");
+    toast("Message Sent!!")
     setSending(false);
   }, [sending]);
 
