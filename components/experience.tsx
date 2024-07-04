@@ -219,11 +219,11 @@ const Experience = () => {
                   </p>
                 </div>
 
-                <ul className='my-5 list-disc ml-5 space-y-2'>
+                <ul className='my-5 list-disc ml-5 space-y-2 text-left'>
                   {experience.points.map((point, index) => (
                     <li
                       key={`experience-point-${index}`}
-                      className='text-black/50 font-normal pl-1 text-sm'
+                      className='text-black/50 font-normal pl-1 text-sm text-left'
                     >
                       {point}
                     </li>

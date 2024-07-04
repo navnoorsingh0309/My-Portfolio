@@ -44,7 +44,7 @@ export default function Home() {
 
         {/* Greetings */}
         <div className="flex flex-col space-y-2 md:space-y-4 justify-center items-center h-screen text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold absolute">
-          <h1 className="text-[#FFD700]">Hi, I am Navnoor 👋</h1>
+          <h1 className="text-[#FFD700]">Hi, I am Navnoor Singh 👋</h1>
           {<FlipWords words={words} />}
         </div>
       </div>
