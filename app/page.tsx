@@ -1,4 +1,5 @@
 import About from "@/components/about";
+import Experience from "@/components/experience";
 import { FlipWords } from "@/components/flip-words";
 import { NavBar } from "@/components/navbar";
 import Projects from "@/components/projects";
@@ -23,32 +24,33 @@ export default function Home() {
             width={100}
             height={100}
             alt="Tensorflow"
-            className="w-14 h-14 md:w-24 md:h-24 translate-y-10 md:translate-y-0"
+            className="w-14 h-14 lg:w-20 lg:h-20 xl:w-24 xl:h-24 translate-y-10 md:translate-y-0"
           />
           <Image
             src="/python.png"
             width={100}
             height={100}
             alt="python"
-            className="w-14 h-14 translate-y-20 md:w-36 md:h-36"
+            className="w-14 h-14 lg:w-20 lg:h-20 xl:w-24 xl:h-24 translate-y-20 md:w-36 md:h-36"
           />
           <Image
             src="/react.png"
             width={100}
             height={100}
             alt="React"
-            className="w-14 h-14 md:w-24 md:h-24 translate-y-10 md:translate-y-0"
+            className="w-14 h-14 lg:w-20 lg:h-20 xl:w-24 xl:h-24 translate-y-10 md:translate-y-0"
           />
         </div>
 
         {/* Greetings */}
-        <div className="flex flex-col space-y-2 md:space-y-4 justify-center items-center h-screen text-xl md:text-5xl font-bold absolute">
+        <div className="flex flex-col space-y-2 md:space-y-4 justify-center items-center h-screen text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold absolute">
           <h1 className="text-[#FFD700]">Hi, I am Navnoor 👋</h1>
           {<FlipWords words={words} />}
         </div>
       </div>
       <About />
       <Projects/>
+      <Experience/>
     </div>
   );
 }
