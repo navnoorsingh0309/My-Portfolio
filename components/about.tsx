@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section className="flex flex-col justify-center space-y-4 items-center bg-black/1 w-full p-4 px-[30px] sm:px-[70px]" id="about">
+    <section className="flex flex-col justify-center space-y-4 items-center bg-blue-950/50 w-full p-4 px-[30px] sm:px-[70px]" id="about">
       <h1
         className="text-5xl flex"
         style={{ fontFamily: "GaMaamli, sans-serif" }}

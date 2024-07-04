@@ -15,7 +15,7 @@ export default function Home() {
     "Feel Free to contact me :)",
   ];
   return (
-    <div className="flex flex-col justify-center items-center h-full bg-blue-50/20">
+    <div className="flex flex-col justify-center items-center h-full bg-blue-950/50">
       <NavBar />
       <div className="flex flex-row gap-2 w-screen h-screen justify-center px-1 sm:px-10 bg-transparent text-center mx-auto items-center">
 
@@ -50,9 +50,11 @@ export default function Home() {
           {<FlipWords words={words} />}
         </div>
       </div>
-      <About />
-      <Projects />
-      <Experience />
+      <div className="bg-black">
+        <About />
+        <Projects />
+        <Experience />
+      </div>
     </div>
   );
 }

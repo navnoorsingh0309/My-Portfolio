@@ -104,6 +104,10 @@ const skills = [
     imageUrl: "/stack/mongo.jpg",
   },
   {
+    name: "Appwrite",
+    imageUrl: "/stack/appwrite.png"
+  },
+  {
     name: "Next Js",
     imageUrl: "/stack/nextjs.png",
   },
@@ -155,7 +159,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section className="flex flex-col justify-center space-y-4 items-center bg-black/1 w-full p-4 px-8 lg:px-60 xl:px-72 mt-[200px]" id="experience">
+    <section className="flex flex-col justify-center space-y-4 items-center bg-blue-950/50 w-full p-4 px-8 lg:px-60 xl:px-72 pt-[200px]" id="experience">
       <h1
         className="text-5xl flex"
         style={{ fontFamily: "GaMaamli, sans-serif" }}
