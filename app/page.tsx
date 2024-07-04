@@ -5,12 +5,14 @@ import { NavBar } from "@/components/navbar";
 import Projects from "@/components/projects";
 import './home.css'
 import { useRef } from "react";
+import Contact from "@/components/contact";
 
 export default function Home() {
   
   const words = [
     "A Software Developer",
     "A Machine Learning Enthusiast",
+    "A Robotics Enthusiast",
     "A Business Enthusiast",
     "Feel Free to contact me :)",
   ];
@@ -54,6 +56,7 @@ export default function Home() {
         <About />
         <Projects />
         <Experience />
+        <Contact />
       </div>
     </div>
   );
