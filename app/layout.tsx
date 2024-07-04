@@ -6,6 +6,7 @@ import { WavyBackground } from "@/components/wavy-background";
 import { Spotlight } from "@/components/spotlight";
 import './fonts.css'
 import { cn } from "@/utils/cn";
+import { NavBar } from "@/components/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 

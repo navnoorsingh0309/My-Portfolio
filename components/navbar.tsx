@@ -8,7 +8,12 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 
-const navItems = ["About", "Projects", "Experience", "Contact"];
+const navItems = [
+  { item: "About", link: "#about" },
+  { item: "Projects", link: "#projects" },
+  { item: "Experience", link: "#experience" },
+  { item: "Contact", link: "#contact" },
+];
 
 export const NavBar = () => {
   const { scrollYProgress } = useScroll();
@@ -16,23 +21,23 @@ export const NavBar = () => {
   // Initially visible
   const [visible, setVisible] = useState(true);
 
-  //   useMotionValueEvent(scrollYProgress, "change", (current) => {
-  //     // Check if current is not undefined and is a number
-  //     if (typeof current === "number") {
-  //       let direction = current! - scrollYProgress.getPrevious()!;
+  useMotionValueEvent(scrollYProgress, "change", (current) => {
+    // Check if current is not undefined and is a number
+    if (typeof current === "number") {
+      let direction = current! - scrollYProgress.getPrevious()!;
 
-  //       if (scrollYProgress.get() < 0.05) {
-  //         // also set true for the initial state
-  //         setVisible(true);
-  //       } else {
-  //         if (direction < 0) {
-  //           setVisible(true);
-  //         } else {
-  //           setVisible(false);
-  //         }
-  //       }
-  //     }
-  //   });
+      if (scrollYProgress.get() < 0.05) {
+        // also set true for the initial state
+        setVisible(true);
+      } else {
+        if (direction < 0) {
+          setVisible(true);
+        } else {
+          setVisible(false);
+        }
+      }
+    }
+  });
 
   return (
     <AnimatePresence>
@@ -51,8 +56,12 @@ export const NavBar = () => {
         className="flex flex-row gap-4 sm:gap-8 mx-auto border border-white/10 rounded-lg z-[100] px-8 py-2 sm:py-4 bg-blue-50/5"
       >
         {navItems.map((item: any, index: any) => (
-          <Link key={`link=${index}`} href="" className="hover:text-[#ffd700] text-[8px] sm:text-xs md:text-md lg:text-lg">
-            {item}
+          <Link
+            key={`link=${index}`}
+            href={item.link}
+            className="hover:text-[#ffd700] text-[8px] sm:text-xs md:text-md lg:text-lg"
+          >
+            {item.item}
           </Link>
         ))}
       </motion.div>

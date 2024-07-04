@@ -87,7 +87,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="flex flex-col justify-center space-y-4 items-center bg-black/1 w-full p-4 px-[30px] sm:px-[70px] mt-[100px]">
+    <section className="flex flex-col justify-center space-y-4 items-center bg-black/1 w-full p-4 px-[30px] sm:px-[70px] mt-[100px]" id="projects">
       <h1
         className="text-5xl flex"
         style={{ fontFamily: "GaMaamli, sans-serif" }}
@@ -146,7 +146,7 @@ const Projects = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

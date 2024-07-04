@@ -155,7 +155,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <div className="flex flex-col justify-center space-y-4 items-center bg-black/1 w-full p-4 px-8 lg:px-60 xl:px-72 mt-[200px]">
+    <section className="flex flex-col justify-center space-y-4 items-center bg-black/1 w-full p-4 px-8 lg:px-60 xl:px-72 mt-[200px]" id="experience">
       <h1
         className="text-5xl flex"
         style={{ fontFamily: "GaMaamli, sans-serif" }}
@@ -235,7 +235,7 @@ const Experience = () => {
         </div>
       </div>
       <hr className="border-slate-200" />{" "}
-    </div>
+    </section>
   );
 };
 
