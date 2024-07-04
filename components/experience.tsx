@@ -37,7 +37,7 @@ const skills = [
   },
   {
     name: "Perl",
-    imageUrl: "/stack/Perl.png",
+    imageUrl: "/stack/perl.png",
   },
   {
     name: "C#",
@@ -45,7 +45,7 @@ const skills = [
   },
   {
     name: "Go",
-    imageUrl: "/stack/GO.png",
+    imageUrl: "/stack/Go.png",
   },
   {
     name: "Kotlin",
