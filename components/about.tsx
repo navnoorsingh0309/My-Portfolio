@@ -79,7 +79,7 @@ const About = () => {
             robotic system, develop intelligent algorithms for autonomous
             decision making, and contribute to software solutions that optimize
             efficiency and performance. I am ready and bold enough to take
-            technical challenges that can shape today's industry and technical
+            technical challenges that can shape today&apos;s industry and technical
             aspects within me.
           </p>
         </div>
