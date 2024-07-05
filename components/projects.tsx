@@ -94,7 +94,7 @@ const Projects = () => {
       >
         My &nbsp; <p className="text-[#ffd700]">Projects</p>
       </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-y-40 gap-x-24 pt-10 sm:pt-20">
+      <div className="flex flex-wrap items-center justify-center p-4 gap-y-32 lg:gap-y-40 gap-x-24 pt-10 sm:pt-20">
         {projects.map((item) => (
           <div
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"

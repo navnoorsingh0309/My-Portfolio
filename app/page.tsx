@@ -19,7 +19,7 @@ export default function Home() {
     <div className="flex flex-col justify-center space-y-0 h-full bg-blue-950/50">
       <div className="flex flex-col gap-2 w-full justify-center px-1 sm:px-10 bg-transparent text-center mx-auto items-center">
         <NavBar />
-        <div className="flex flex-row gap-2 w-full justify-center bg-transparent text-center mx-auto items-center">
+        <div className="flex flex-row gap-2 w-full justify-center bg-transparent text-center mx-auto items-center translate-y-[-80px]">
           {/* Contact */}
           <div className="flex flex-col justify-center items-center gap-6">
             <a href="https://github.com/navnoorsingh0309" target="_blank">

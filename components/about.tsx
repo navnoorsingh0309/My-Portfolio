@@ -18,7 +18,7 @@ const About = () => {
       <div className="grid grid-rows-2 gap-4 mx-auto w-full">
         <div className="grid grid-cols-1 gap-4 row-span-1 lg:grid-cols-3">
         <WobbleCard
-          containerClassName="col-span-1 h-full bg-pink-800"
+          containerClassName="col-span-1 bg-pink-800"
           className=""
         >
           <div>
@@ -34,7 +34,7 @@ const About = () => {
             </p>
           </div>
         </WobbleCard>
-        <WobbleCard containerClassName="col-span-2" className="">
+        <WobbleCard containerClassName="col-span-1 lg:col-span-2" className="">
           <div className="">
             <h2 className="text-center sm:text-left text-balance text-3xl font-semibold tracking-[-0.015em] text-white">
               Robotics
@@ -60,7 +60,7 @@ const About = () => {
       </div>
       <div className="row-span-1">
       <WobbleCard
-        containerClassName="col-span-1 h-full bg-blue-900"
+        containerClassName="col-span-1 bg-blue-900"
         className=""
       >
         <div>
