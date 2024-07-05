@@ -79,6 +79,7 @@ const Contact = () => {
           onChange={(e) => {
             setName((e.target as HTMLInputElement).value);
           }}
+          style={{ fontFamily: "Stylish, sans-serif" }}
           required
         />
         <input
@@ -90,6 +91,7 @@ const Contact = () => {
           onChange={(e) => {
             setEmail((e.target as HTMLInputElement).value);
           }}
+          style={{ fontFamily: "Stylish, sans-serif" }}
           required
         />
         <textarea
@@ -100,6 +102,7 @@ const Contact = () => {
           onChange={(e) => {
             setMessage((e.target as HTMLTextAreaElement).value);
           }}
+          style={{ fontFamily: "Stylish, sans-serif" }}
           required
         />
         <button

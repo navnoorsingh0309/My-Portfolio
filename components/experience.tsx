@@ -171,7 +171,10 @@ const Experience = () => {
       </h1>
       {/* Tech Stack */}
       <div className="w-full text-center md:text-left pt-10">
-        <h1 className="text-3xl flex" style={{ fontFamily: "Stylish, sans-serif" }}>
+        <h1
+          className="text-3xl flex"
+          style={{ fontFamily: "Stylish, sans-serif" }}
+        >
           My Tech &nbsp; <p className="text-[#ffd700]">Stack</p>
         </h1>
         <div className="mt-16 flex flex-wrap justify-center gap-10 md:gap-24">
@@ -194,7 +197,10 @@ const Experience = () => {
       </div>
       {/* Experience */}
       <div className="py-16 text-center md:text-left">
-        <h1 className="text-3xl flex" style={{ fontFamily: "Stylish, sans-serif" }}>
+        <h1
+          className="text-3xl flex"
+          style={{ fontFamily: "Stylish, sans-serif" }}
+        >
           My Work &nbsp; <p className="text-[#ffd700]">Experience</p>
         </h1>
         <div className="mt-12 flex justify-center">
