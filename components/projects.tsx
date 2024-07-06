@@ -89,7 +89,7 @@ const Projects = () => {
   return (
     <section className="flex flex-col justify-center space-y-4 items-center bg-blue-950/50 w-full p-4 px-[30px] sm:px-[70px] pt-[100px]" id="projects">
       <h1
-        className="text-5xl flex"
+        className="text-4xl lg:text-7xl flex animate-bounce"
         style={{ fontFamily: "GaMaamli, sans-serif" }}
       >
         My &nbsp; <p className="text-[#ffd700]">Projects</p>

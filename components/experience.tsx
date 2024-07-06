@@ -88,12 +88,20 @@ const skills = [
     imageUrl: "/stack/react.png",
   },
   {
+    name: "Next Js",
+    imageUrl: "/stack/nextjs.png",
+  },
+  {
     name: "Node Js",
     imageUrl: "/stack/nodejs.png",
   },
   {
     name: "Express Js",
     imageUrl: "/stack/expressjs.png",
+  },
+  {
+    name: "Flask",
+    imageUrl: "/stack/flask.png",
   },
   {
     name: "SQL",
@@ -108,8 +116,8 @@ const skills = [
     imageUrl: "/stack/appwrite.png",
   },
   {
-    name: "Next Js",
-    imageUrl: "/stack/nextjs.png",
+    name: "Amazon Web Services",
+    imageUrl: "/stack/aws.png",
   },
   {
     name: "Docker",
@@ -164,7 +172,7 @@ const Experience = () => {
       id="experience"
     >
       <h1
-        className="text-5xl flex"
+        className="text-4xl lg:text-7xl flex animate-bounce"
         style={{ fontFamily: "GaMaamli, sans-serif" }}
       >
         My &nbsp; <p className="text-[#ffd700]">Experience</p>
@@ -172,7 +180,7 @@ const Experience = () => {
       {/* Tech Stack */}
       <div className="w-full text-center md:text-left pt-10">
         <h1
-          className="text-3xl flex"
+          className="text-3xl lg:text-5xl flex"
           style={{ fontFamily: "Stylish, sans-serif" }}
         >
           My Tech &nbsp; <p className="text-[#ffd700]">Stack</p>
@@ -198,7 +206,7 @@ const Experience = () => {
       {/* Experience */}
       <div className="py-16 text-center md:text-left">
         <h1
-          className="text-3xl flex"
+          className="text-3xl lg:text-5xl flex"
           style={{ fontFamily: "Stylish, sans-serif" }}
         >
           My Work &nbsp; <p className="text-[#ffd700]">Experience</p>

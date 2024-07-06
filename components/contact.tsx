@@ -37,7 +37,7 @@ const Contact = () => {
       id="contact"
     >
       <h1
-        className="text-5xl flex mb-10"
+        className="text-4xl lg:text-7xl flex mb-10 animate-bounce"
         style={{ fontFamily: "GaMaamli, sans-serif" }}
       >
         Let Get in &nbsp; <p className="text-[#ffd700]">Touch</p>
@@ -72,7 +72,7 @@ const Contact = () => {
         onSubmit={handleSubmit}
       >
         <input
-          className="text-2xl bg-white text-black w-8/12 p-2 rounded-xl contact-form-btn"
+          className="text-2xl bg-white text-black w-11/12 md:w-8/12 p-2 rounded-xl contact-form-btn"
           name="name"
           placeholder="Your Name"
           value = {name}
@@ -83,7 +83,7 @@ const Contact = () => {
           required
         />
         <input
-          className="text-2xl bg-white text-black w-8/12 p-2 rounded-xl contact-form-btn"
+          className="text-2xl bg-white text-black w-11/12 md:w-8/12 p-2 rounded-xl contact-form-btn"
           name="email"
           type="email"
           placeholder="Your Email"
@@ -95,7 +95,7 @@ const Contact = () => {
           required
         />
         <textarea
-          className="text-2xl bg-white text-black w-8/12 h-[200px] p-2 rounded-xl contact-form-btn"
+          className="text-2xl bg-white text-black w-11/12 md:w-8/12 h-[200px] p-2 rounded-xl contact-form-btn"
           name="message"
           placeholder="Message"
           value = {message}
