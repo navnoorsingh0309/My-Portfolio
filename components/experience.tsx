@@ -1,9 +1,5 @@
 "use client";
 import React from "react";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import Image from "next/image";
 import { Timeline } from "./ui/timeline";
@@ -131,46 +127,45 @@ const skills = [
   },
 ];
 
-const experiences = [
-  {
-    company_name: "iHub-AWaDH, IIT Ropar",
-    date: "Aug 2023 - May 2024",
-    icon: "/experience/awadh.jpeg",
-    title: "Research Intern",
-    iconBg: "#a2d2ff",
-    points: [
-      "Implemented LE Coded PHY to enable long range feature of BLE along with extended advertisement.",
-      "Worked on efficient increment for BLE packet over long range transmission using various algorithms and techniques.",
-    ],
-  },
-  {
-    company_name: "Chematico Technologies",
-    date: "Mar 2024 - Jun 2024",
-    icon: "/experience/chematico.jpeg",
-    title: "Software Development Intern",
-    iconBg: "#a2d2ff",
-    points: [
-      "Developed a C# application to integrate the Emstat Pico module, aiming to facilitate data acquisition for voltammetery.",
-      "Software platform generates plots fo potential and employs various analytical techniques to ensure comprehensive analysis.",
-    ],
-  },
-  {
-    company_name: "IKSHAMA Centre, IIT Mandi",
-    date: "May 2024 - Present",
-    icon: "/experience/ikshma.jpg",
-    title: "Research Intern",
-    iconBg: "#a2d2ff",
-    points: [
-      "Analysing and applying machine learning algorithms on EEG with the help of python libraries like MNE and using sLoreta software.",
-      "I am current engaged in research concerning connectivity analysis and source localization on mediation EEG data.",
-    ],
-  },
-];
+// const experiences = [
+//   {
+//     company_name: "iHub-AWaDH, IIT Ropar",
+//     date: "Aug 2023 - May 2024",
+//     icon: "/experience/awadh.jpeg",
+//     title: "Research Intern",
+//     iconBg: "#a2d2ff",
+//     points: [
+//       "Implemented LE Coded PHY to enable long range feature of BLE along with extended advertisement.",
+//       "Worked on efficient increment for BLE packet over long range transmission using various algorithms and techniques.",
+//     ],
+//   },
+//   {
+//     company_name: "Chematico Technologies",
+//     date: "Mar 2024 - Jun 2024",
+//     icon: "/experience/chematico.jpeg",
+//     title: "Software Development Intern",
+//     iconBg: "#a2d2ff",
+//     points: [
+//       "Developed a C# application to integrate the Emstat Pico module, aiming to facilitate data acquisition for voltammetery.",
+//       "Software platform generates plots fo potential and employs various analytical techniques to ensure comprehensive analysis.",
+//     ],
+//   },
+//   {
+//     company_name: "IKSHAMA Centre, IIT Mandi",
+//     date: "May 2024 - Present",
+//     icon: "/experience/ikshma.jpg",
+//     title: "Research Intern",
+//     iconBg: "#a2d2ff",
+//     points: [
+//       "Analysing and applying machine learning algorithms on EEG with the help of python libraries like MNE and using sLoreta software.",
+//       "I am current engaged in research concerning connectivity analysis and source localization on mediation EEG data.",
+//     ],
+//   },
+// ];
 
 const Experience = () => {
-
   // Experience Data
-  const experiences1 = [
+  const experiences = [
     {
       title: "Aug 2023 - May 2024",
       content: (
@@ -202,7 +197,7 @@ const Experience = () => {
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Worked at IKSHAMA Centre, IIT Mandi as a Machine Learning Intern.
+            Worked at Chematico Technologies as a Software Developer Intern.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
@@ -221,10 +216,10 @@ const Experience = () => {
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Worked at Chematico Technologies as a Software Developer Intern.
+            Worked at IKSHAMA Centre, IIT Mandi as a Machine Learning Intern.
           </p>
           <div className="grid grid-cols-2 gap-4">
-          <Image
+            <Image
               src="/experience/ikshma/1.png"
               alt="IKSHMA"
               width={500}
@@ -246,7 +241,7 @@ const Experience = () => {
 
   return (
     <section
-      className="flex flex-col justify-center space-y-4 items-center bg-blue-950/50 w-full p-4 px-8 lg:px-60 xl:px-72 pt-[200px]"
+      className="flex flex-col justify-center space-y-4 items-center bg-blue-950/50 w-full p-4 px-8 lg:px-60 xl:px-36 pt-[200px]"
       id="experience"
     >
       <h1
@@ -263,7 +258,7 @@ const Experience = () => {
         >
           My Tech &nbsp; <p className="text-[#ffd700]">Stack</p>
         </h1>
-        <div className="mt-16 flex flex-wrap justify-center gap-10 md:gap-24">
+        <div className="mt-16 flex flex-wrap justify-center gap-5 md:gap-10">
           {skills.map((skill) => (
             <div
               className="block-container w-14 h-14 md:w-20 md:h-20"
@@ -290,7 +285,7 @@ const Experience = () => {
           My Work &nbsp; <p className="text-[#ffd700]">Experience</p>
         </h1>
         <div className="mt-12 flex justify-center">
-        <Timeline data={experiences1} />
+          <Timeline data={experiences} />
         </div>
       </div>
       <hr className="border-slate-200" />{" "}
