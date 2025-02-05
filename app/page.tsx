@@ -44,6 +44,10 @@ const slideData = [
     title: "Robotics Club GC 2025",
     src: "/carousel/7.jpeg",
   },
+  {
+    title: "General Championship 2025",
+    src: "/carousel/8.jpeg",
+  },
 ];
 
 export default function Home() {

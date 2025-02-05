@@ -4,6 +4,12 @@ import { HoverEffect } from "./ui/card-hover-effect";
 
 const projects = [
   {
+    title: "BoST Inventory Management Portal",
+    image: "/Projects/inventory_portal.png",
+    description: "Portal to manage all BoST inventory.",
+    link: "https://github.com/navnoorsingh0309/inventory-management",
+  },
+  {
     title: "Fleet Management in ROS2 Humble",
     image: "/Projects/bharatforge.png",
     description: "BharatForge Submission in Inter IIT Tech 13.0.",
@@ -13,7 +19,7 @@ const projects = [
     title: "Fault Tolerant Control of UAV",
     image: "/Projects/ideaforge.png",
     description: "Single Motor Failure Recovery.",
-    link: "/",
+    link: "https://github.com/navnoorsingh0309/Fault-Tolerent-Control",
   },
   {
     title: "VR Hand Glove",

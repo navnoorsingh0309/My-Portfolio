@@ -23,7 +23,7 @@ const About = () => {
           >
             <div>
               <h2 className="text-center sm:text-left text-balance text-3xl font-semibold tracking-[-0.015em] text-white">
-                IITian
+                Study
               </h2>
               <p className="mt-4 text-sm xl:text-xl text-neutral-200 w-full text-justify">
                 I am currently pursuing a degree in Electrical Engineering at
