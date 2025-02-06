@@ -52,13 +52,6 @@ const projects = [
     description: "JLR Submission in Inter IIT Tech 12.0.",
     link: "/",
   },
-
-  {
-    title: "Line Follower with PID Control",
-    image: "/Projects/line-follower.jpeg",
-    description: "Mobile bot that follows the line.",
-    link: "/",
-  },
   {
     title: "BOAA Website",
     image: "/Projects/3.jpeg",
