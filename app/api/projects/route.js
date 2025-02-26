@@ -1,7 +1,7 @@
 import client from "@/lib/mongo";
 import { NextResponse } from "next/server";
 
-export async function GET(req) {
+export async function GET() {
     try {
       const database = client.db("projects");
       const collection = database.collection("projects");

@@ -20,3 +20,8 @@ export type ProjectSchema = {
     description: string;
     download: string;
 }
+export type Skills = {
+    _id: string;
+    image: string;
+    title: string;
+}
