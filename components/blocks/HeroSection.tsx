@@ -15,6 +15,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 const HeroSection = () => {
   const [carouselData, setCarouselData] = useState<CarouselSchema[]>([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchCarousel = async () => {
       try {
@@ -24,6 +25,7 @@ const HeroSection = () => {
         }
         const data = await response.json();
         setCarouselData(data.carousel);
+        setLoading(false);
       } catch (err) {
         console.error("Error fetching inventory:", err);
       }
@@ -36,6 +38,7 @@ const HeroSection = () => {
     "A Business Enthusiast",
     "Feel Free to contact :)",
   ];
+  if (loading) return <p>Loading!!</p>;
   return (
     <div className="grid grid-cols-1 w-full h-fit pb-[100px] pt-[50px] md:grid-cols-2">
       <div className="flex justify-center">
@@ -102,19 +105,31 @@ const HeroSection = () => {
               <CarouselContent>
                 {carouselData.map((item: CarouselSchema) => (
                   <CarouselItem key={item._id}>
-                    <div className="p-1">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5 }}
+                      className="p-1"
+                    >
                       <Card>
                         <CardContent className="flex-col aspect-square items-center justify-center p-6">
-                          <img
+                          <motion.img
                             src={`https://utfs.io/f/${item.image}`}
-                            className="object-cover w-auto h-full"
+                            className="object-cover w-auto h-full rounded-lg"
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ duration: 0.2 }}
                           />
-                          <h1 className="text-center font-bold text-2xl">
+                          <motion.h1
+                            className="text-center font-bold text-2xl mt-4 text-white/90"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.2, duration: 0.5 }}
+                          >
                             {item.title}
-                          </h1>
+                          </motion.h1>
                         </CardContent>
                       </Card>
-                    </div>
+                    </motion.div>
                   </CarouselItem>
                 ))}
               </CarouselContent>

@@ -1,4 +1,4 @@
-import About from "@/components/about";
+import About from "@/components/blocks/About";
 import Experience from "@/components/experience";
 import Projects from "@/components/projects";
 import "./home.css";
@@ -11,7 +11,7 @@ export default function Home() {
       <div className="flex flex-col gap-2 w-full justify-center px-1 sm:px-10 bg-transparent text-center mx-auto items-center">
         <HeroSection/>
       </div>
-      <div className="bg-black translate-y-[-80px]">
+      <div className="translate-y-[-80px]">
         <About />
         <Projects />
         <Experience />

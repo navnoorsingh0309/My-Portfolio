@@ -7,6 +7,7 @@ import './fonts.css'
 import { cn } from "@/lib/utils";
 import './styles.css'
 import { Toaster } from "sonner";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,9 +30,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <WavyBackground className="mx-auto w-full">
+          {/* <WavyBackground className="mx-auto w-full"> */}
+          <AnimatedBackground/>
             {children}
-          </WavyBackground>
+          {/* </WavyBackground> */}
         </ThemeProvider>
         <Toaster />
       </body>
