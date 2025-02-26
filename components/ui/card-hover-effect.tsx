@@ -1,18 +1,13 @@
 import { cn } from "@/lib/utils";
+import { ProjectSchema } from "@/models/schema";
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
 import { useState } from "react";
 
 export const HoverEffect = ({
   items,
   className,
 }: {
-  items: {
-    image: string;
-    title: string;
-    description: string;
-    link: string;
-  }[];
+  items: ProjectSchema[];
   className?: string;
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -25,9 +20,8 @@ export const HoverEffect = ({
       )}
     >
       {items.map((item, idx) => (
-        <Link
-          href={item?.link}
-          key={item?.link}
+        <div
+          key={item?._id}
           className="relative group  block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -51,10 +45,10 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card className="w-full">
             <CardTitle>{item.title}</CardTitle>
-            <img src={item.image} className="w-full h-[250px] object-cover"/>
+            <img src={`https://utfs.io/f/${item.image[0]}`} className="w-full h-[250px] object-cover"/>
             <CardDescription>{item.description}</CardDescription>
           </Card>
-        </Link>
+        </div>
       ))}
     </div>
   );

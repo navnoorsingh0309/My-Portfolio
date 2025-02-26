@@ -1,6 +1,6 @@
 import About from "@/components/blocks/About";
 import Experience from "@/components/experience";
-import Projects from "@/components/projects";
+import Projects from "@/components/blocks/Projects";
 import "./home.css";
 import Contact from "@/components/contact";
 import HeroSection from "@/components/blocks/HeroSection";

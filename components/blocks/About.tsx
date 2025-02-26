@@ -10,7 +10,7 @@ const About = () => {
   const [data2, setData2] = useState<AboutSchema>();
   const [data3, setData3] = useState<AboutSchema>();
   useEffect(() => {
-    const fetchCarousel = async () => {
+    const fetchAboutMe = async () => {
       try {
         const response = await fetch(`/api/about`);
         if (!response.ok) {
@@ -26,7 +26,7 @@ const About = () => {
         console.error("Error fetching inventory:", err);
       }
     };
-    fetchCarousel();
+    fetchAboutMe();
   }, []);
   return (
     <motion.div

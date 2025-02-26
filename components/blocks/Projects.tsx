@@ -1,6 +1,7 @@
 "use client";
-
-import { HoverEffect } from "./ui/card-hover-effect";
+import { useEffect, useState } from "react";
+import { HoverEffect } from "../ui/card-hover-effect";
+import { ProjectSchema } from "@/models/schema";
 
 const projects = [
   {
@@ -79,9 +80,25 @@ const projects = [
 ];
 
 const Projects = () => {
+  const [projects, setProjects] = useState<ProjectSchema[]>([]);
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const response = await fetch(`/api/projects`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+        setProjects(data.projects);
+      } catch (err) {
+        console.error("Error fetching inventory:", err);
+      }
+    };
+    fetchProjects();
+  }, []);
   return (
     <section
-      className="flex flex-col justify-center space-y-4 items-center bg-blue-950/50 w-full p-4 px-[30px] sm:px-[70px] pt-[100px]"
+      className="flex flex-col justify-center space-y-4 items-center w-full p-4 px-[30px] sm:px-[70px] pt-[100px]"
       id="projects"
     >
       <h1
@@ -90,9 +107,7 @@ const Projects = () => {
       >
         My &nbsp; <p className="text-[#ffd700]">Projects</p>
       </h1>
-      {/* <div className="flex flex-wrap items-center justify-center"> */}
       <HoverEffect items={projects} />
-      {/* </div> */}
     </section>
   );
 };
