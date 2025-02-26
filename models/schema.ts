@@ -25,3 +25,11 @@ export type Skills = {
     image: string;
     title: string;
 }
+export type ExperienceSchema = {
+    _id: string;
+    title: string;
+    icon: string;
+    description: string;
+    timeline: string;
+    image: string[];
+}

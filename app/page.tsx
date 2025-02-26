@@ -7,16 +7,18 @@ import HeroSection from "@/components/blocks/HeroSection";
 import TechStack from "@/components/blocks/Skills";
 import { useState } from "react";
 import LoadingScreen from "@/components/ui/LoadingScreen";
+import Experience from "@/components/blocks/experience";
 
 export default function Home() {
   const [loadedHero, setHeroLoaded] = useState(false);
   const [loadedAbout, setAboutLoaded] = useState(false);
   const [loadedProjects, setProjectsLoaded] = useState(false);
   const [loadedTechStack, setTechLoaded] = useState(false);
+  const [loadedExperience, setExperienceLoaded] = useState(false);
   return (
     <>
       <LoadingScreen
-        loaded={loadedHero && loadedProjects && loadedTechStack && loadedAbout}
+        loaded={loadedHero && loadedProjects && loadedTechStack && loadedAbout && loadedExperience}
       />
       <div className="flex flex-col justify-center space-y-0 h-full bg-blue-950/50">
         <div className="flex flex-col gap-2 w-full justify-center px-1 sm:px-10 bg-transparent text-center mx-auto items-center">
@@ -26,6 +28,7 @@ export default function Home() {
           <About loaded={loadedHero && loadedAbout} setLoaded={setAboutLoaded} />
           <Projects loaded={loadedHero && loadedAbout && loadedProjects} setLoaded={setProjectsLoaded} />
           <TechStack loaded={loadedHero && loadedAbout && loadedProjects && loadedTechStack} setLoaded={setTechLoaded} />
+          <Experience loaded={loadedHero && loadedAbout && loadedProjects && loadedTechStack && loadedExperience} setLoaded={setExperienceLoaded} />
           {/* <Contact /> */}
         </div>
       </div>
