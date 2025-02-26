@@ -56,7 +56,7 @@ const projects = [
   {
     title: "BOAA Website",
     image: "/Projects/3.jpeg",
-    description: "Site of Board of Academic Affairs, IIT Ropar",
+    description: "Website of Board of Academic Affairs, IIT Ropar",
     link: "https://iitrpr.ac.in/boaa",
   },
   {

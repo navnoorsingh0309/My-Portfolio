@@ -1,5 +1,3 @@
-import { StringToBoolean } from "class-variance-authority/types";
-
 export type CarouselSchema = {
     _id: string;
     image: string;
@@ -16,6 +14,7 @@ export type ProjectSchema = {
     image: string[];
     brief: string;
     website: string;
+    github: string;
     report: string;
     team: string[];
     description: string;
