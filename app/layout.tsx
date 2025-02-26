@@ -3,9 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 import { WavyBackground } from "@/components/wavy-background";
-import { Spotlight } from "@/components/spotlight";
 import './fonts.css'
-import { cn } from "@/libs/utils";
+import { cn } from "@/lib/utils";
 import './styles.css'
 import { Toaster } from "sonner";
 
@@ -30,10 +29,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Spotlight
-            className="absolute top-40 left-0 md:left-60 md:-top-20 hidden lg:flex"
-            fill="white"
-          />
           <WavyBackground className="mx-auto w-full">
             {children}
           </WavyBackground>
