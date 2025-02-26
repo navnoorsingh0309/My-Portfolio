@@ -3,9 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 import { WavyBackground } from "@/components/wavy-background";
-import './fonts.css'
+import "./fonts.css";
 import { cn } from "@/lib/utils";
-import './styles.css'
+import "./styles.css";
 import { Toaster } from "sonner";
 import AnimatedBackground from "@/components/AnimatedBackground";
 
@@ -30,10 +30,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {/* <WavyBackground className="mx-auto w-full"> */}
-          <AnimatedBackground/>
-            {children}
-          {/* </WavyBackground> */}
+          <AnimatedBackground />
+          {children}
         </ThemeProvider>
         <Toaster />
       </body>

@@ -5,7 +5,12 @@ import Image from "next/image";
 import { AboutSchema } from "@/models/schema";
 import { motion } from "framer-motion";
 
-const About = () => {
+interface props {
+  loaded: boolean;
+  setLoaded: (load: boolean) => void;
+};
+
+const About:React.FC<props> = ({loaded, setLoaded}) => {
   const [data1, setData1] = useState<AboutSchema>();
   const [data2, setData2] = useState<AboutSchema>();
   const [data3, setData3] = useState<AboutSchema>();
@@ -21,6 +26,7 @@ const About = () => {
           if (index === 0) setData1(item);
           else if (index === 1) setData2(item);
           else if (index === 2) setData3(item);
+          setLoaded(true);
         });
       } catch (err) {
         console.error("Error fetching inventory:", err);
@@ -28,6 +34,8 @@ const About = () => {
     };
     fetchAboutMe();
   }, []);
+  if (!loaded)
+    return<></>
   return (
     <motion.div
       className="flex flex-col justify-center space-y-4 items-center w-full p-4 px-[30px] sm:px-[70px] min-h-screen"

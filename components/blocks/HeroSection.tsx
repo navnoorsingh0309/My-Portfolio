@@ -13,9 +13,13 @@ import { CarouselSchema } from "@/models/schema";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 
-const HeroSection = () => {
+interface props {
+  loaded: boolean;
+  setLoaded: (load: boolean) => void;
+};
+
+const HeroSection:React.FC<props> = ({loaded, setLoaded}) => {
   const [carouselData, setCarouselData] = useState<CarouselSchema[]>([]);
-  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchCarousel = async () => {
       try {
@@ -25,7 +29,7 @@ const HeroSection = () => {
         }
         const data = await response.json();
         setCarouselData(data.carousel);
-        setLoading(false);
+        setLoaded(true);
       } catch (err) {
         console.error("Error fetching inventory:", err);
       }
@@ -38,7 +42,9 @@ const HeroSection = () => {
     "A Business Enthusiast",
     "Feel Free to contact :)",
   ];
-  if (loading) return <p>Loading!!</p>;
+  if (!loaded)
+    return<></>
+
   return (
     <div className="grid grid-cols-1 w-full h-fit pb-[100px] pt-[50px] md:grid-cols-2">
       <div className="flex justify-center">
