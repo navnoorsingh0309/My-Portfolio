@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import "react-vertical-timeline-component/style.min.css";
-import Image from "next/image";
 import { Timeline } from "../ui/timeline";
 import { ExperienceSchema } from "@/models/schema";
 
