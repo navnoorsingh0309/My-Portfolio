@@ -30,7 +30,7 @@ const Projects:React.FC<props> = ({loaded, setLoaded}) => {
     return<></>
   return (
     <section
-      className="flex flex-col justify-center space-y-4 items-center w-full p-4 px-[30px] sm:px-[70px] pt-[100px]"
+      className="flex flex-col justify-center space-y-4 items-center w-full p-4 px-[30px] sm:px-[70px] translate-y-[-200px] lg:translate-y-0"
       id="projects"
     >
       <h1

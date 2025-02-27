@@ -38,7 +38,7 @@ const About:React.FC<props> = ({loaded, setLoaded}) => {
     return<></>
   return (
     <motion.div
-      className="flex flex-col justify-center space-y-4 items-center w-full p-4 px-[30px] sm:px-[70px] min-h-screen"
+      className="flex flex-col justify-center space-y-4 items-center w-full p-4 px-[30px] sm:px-[70px]"
       id="about"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}

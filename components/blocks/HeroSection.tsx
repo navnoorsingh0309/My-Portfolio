@@ -106,8 +106,8 @@ const HeroSection:React.FC<props> = ({loaded, setLoaded}) => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="flex items-center justify-center">
-            <Carousel className="w-[400px]">
+          <div className="flex items-center justify-center pt-2 md:pt-0">
+            <Carousel className="w-4/6 md:w-[400px]">
               <CarouselContent>
                 {carouselData.map((item: CarouselSchema) => (
                   <CarouselItem key={item._id}>
@@ -115,7 +115,6 @@ const HeroSection:React.FC<props> = ({loaded, setLoaded}) => {
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5 }}
-                      className="p-1"
                     >
                       <Card>
                         <CardContent className="flex-col aspect-square items-center justify-center p-6">

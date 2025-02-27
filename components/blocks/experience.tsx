@@ -61,7 +61,7 @@ const Experience: React.FC<props> = ({ loaded, setLoaded }) => {
 
   return (
     <section
-      className="flex flex-col justify-center space-y-4 items-center w-full p-4 px-8 lg:px-60 xl:px-36 pt-[200px]"
+      className="flex flex-col justify-center space-y-4 items-center w-full p-4 px-8 lg:px-60 xl:px-36"
       id="experience"
     >
       <h1

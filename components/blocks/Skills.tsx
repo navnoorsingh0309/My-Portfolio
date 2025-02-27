@@ -75,7 +75,7 @@ const TechStack: React.FC<props> = ({ loaded, setLoaded }) => {
 
   return (
     <motion.div
-      className="w-full text-center md:text-left pt-10 pb-16 p-4 px-[30px] sm:px-[70px] relative overflow-hidden"
+      className="w-full text-center md:text-left translate-y-[-200px] lg:translate-y-0 pb-16 p-4 px-[30px] sm:px-[70px] relative overflow-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
