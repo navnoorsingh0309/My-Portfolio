@@ -35,7 +35,7 @@ const HeroSection:React.FC<props> = ({loaded, setLoaded}) => {
       }
     };
     fetchCarousel();
-  }, []);
+  }, [setLoaded]);
   const words = [
     "A Robotics Enthusiast",
     "A Software Developer",

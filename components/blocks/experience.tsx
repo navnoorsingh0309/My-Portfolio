@@ -26,7 +26,7 @@ const Experience: React.FC<props> = ({ loaded, setLoaded }) => {
       }
     };
     fetchExperiences();
-  }, []);
+  }, [setLoaded]);
   const experiences = expData.map((exp: ExperienceSchema) => ({
     title: exp.timeline,
     content: (

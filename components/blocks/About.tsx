@@ -33,7 +33,7 @@ const About:React.FC<props> = ({loaded, setLoaded}) => {
       }
     };
     fetchAboutMe();
-  }, []);
+  }, [setLoaded]);
   if (!loaded)
     return<></>
   return (

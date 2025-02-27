@@ -29,7 +29,7 @@ const TechStack: React.FC<props> = ({ loaded, setLoaded }) => {
       }
     };
     fetchSkills();
-  }, []);
+  }, [setLoaded]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -94,7 +94,7 @@ const TechStack: React.FC<props> = ({ loaded, setLoaded }) => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          Technologies and tools I've worked with and enjoy using
+          Technologies and tools I&apos;ve worked with and enjoy using
         </motion.p>
       </motion.div>
 
