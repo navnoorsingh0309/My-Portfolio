@@ -7,7 +7,7 @@ import "./fonts.css";
 import { cn } from "@/lib/utils";
 import "./styles.css";
 import { Toaster } from "sonner";
-import AnimatedBackground from "@/components/AnimatedBackground";
+import AnimatedBackground from "@/components/ui/AnimatedBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 

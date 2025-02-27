@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { WobbleCard } from "../wobble-cards";
+import { WobbleCard } from "../ui/wobble-cards";
 import Image from "next/image";
 import { AboutSchema } from "@/models/schema";
 import { motion } from "framer-motion";

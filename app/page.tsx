@@ -1,4 +1,4 @@
-import "./home.css";
+import "./styles.css";
 import MainPage from "@/components/MainPage";
 
 export default function Home() {

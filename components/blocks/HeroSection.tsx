@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { FlipWords } from "../flip-words";
+import { FlipWords } from "../ui/flip-words";
 import {
   Carousel,
   CarouselContent,

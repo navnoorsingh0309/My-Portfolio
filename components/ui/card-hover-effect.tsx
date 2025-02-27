@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils"
 import type { ProjectSchema } from "@/models/schema"
 import { AnimatePresence, motion } from "framer-motion"
 import { useState } from "react"
-import { ProjectDialog } from "../project-dialog"
+import { ProjectDialog } from "./project-dialog"
 
 export const HoverEffect = ({
   items,
