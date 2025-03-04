@@ -28,7 +28,7 @@ const HeroSection:React.FC<props> = ({loaded, setLoaded}) => {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const data = await response.json();
-        setCarouselData(data.carousel);
+        setCarouselData(data.carousel.reverse());
         setLoaded(true);
       } catch (err) {
         console.error("Error fetching inventory:", err);
