@@ -14,7 +14,7 @@ const Experience: React.FC<props> = ({ loaded, setLoaded }) => {
   useEffect(() => {
     const fetchExperiences = async () => {
       try {
-        const response = await fetch(`/api/experience`);
+        const response = await fetch(`/api/experience`, { cache: 'no-store' });
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }

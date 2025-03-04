@@ -23,7 +23,7 @@ const HeroSection:React.FC<props> = ({loaded, setLoaded}) => {
   useEffect(() => {
     const fetchCarousel = async () => {
       try {
-        const response = await fetch(`/api/carousel`);
+        const response = await fetch(`/api/carousel`, { cache: 'no-store' });
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }

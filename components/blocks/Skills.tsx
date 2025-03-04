@@ -17,7 +17,7 @@ const TechStack: React.FC<props> = ({ loaded, setLoaded }) => {
     setIsMounted(true);
     const fetchSkills = async () => {
       try {
-        const response = await fetch(`/api/stack`);
+        const response = await fetch(`/api/stack`, { cache: 'no-store' });
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }

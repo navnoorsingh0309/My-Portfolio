@@ -13,7 +13,7 @@ const Projects:React.FC<props> = ({loaded, setLoaded}) => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch(`/api/projects`);
+        const response = await fetch(`/api/projects`, { cache: 'no-store' });
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
