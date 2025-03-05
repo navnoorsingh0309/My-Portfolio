@@ -22,59 +22,93 @@ interface ProjectDialogProps {
 
 export function ProjectDialog({ project, onClose }: ProjectDialogProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isVideo, setIsVideo] = useState(0);
 
   if (!project) return null;
 
-  const nextImage = () => {
-    setCurrentImageIndex((prev) =>
-      prev === project.image.length - 1 ? 0 : prev + 1
+  const nextImage = async () => {
+    // Checking if link is video
+    const upcomingIndex = (prev: number): number => {
+      return prev === 0 ? project.image.length - 1 : prev + 1;
+    };
+    const res = await fetch(
+      `https://utfs.io/f/${project.image[upcomingIndex(currentImageIndex)]}`,
+      { method: "HEAD" }
     );
+    const contentType = res.headers.get("content-type");
+    if (contentType?.split("/")[0] === "video") setIsVideo(1);
+    else setIsVideo(0);
+
+    setCurrentImageIndex(upcomingIndex);
   };
 
-  const prevImage = () => {
-    setCurrentImageIndex((prev) =>
-      prev === 0 ? project.image.length - 1 : prev - 1
+  const prevImage = async () => {
+    // Checking if link is video
+    const upcomingIndex = (prev: number): number => {
+      return prev === 0 ? project.image.length - 1 : prev - 1;
+    };
+    const res = await fetch(
+      `https://utfs.io/f/${project.image[upcomingIndex(currentImageIndex)]}`,
+      { method: "HEAD" }
     );
+    const contentType = res.headers.get("content-type");
+    if (contentType?.split("/")[0] === "video") setIsVideo(1);
+    else setIsVideo(0);
+
+    setCurrentImageIndex(upcomingIndex);
   };
 
   return (
     <Dialog open={!!project} onOpenChange={() => onClose()}>
       <DialogContent className="max-w-[95vw] max-h-[95vh] overflow-y-auto bg-black/90 border border-white/10 p-0">
-      <div className="relative h-[50vh] w-full group">
-        <AnimatePresence mode="wait">
-            <motion.img
-            key={currentImageIndex}
-            src={`https://utfs.io/f/${project.image[currentImageIndex]}`}
-            className="w-full h-full object-contain"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            />
-        </AnimatePresence>
+        <div className="relative h-[50vh] w-full group">
+          <AnimatePresence mode="wait">
+            {!isVideo ? (
+              <motion.img
+                key={currentImageIndex}
+                src={`https://utfs.io/f/${project.image[currentImageIndex]}`}
+                className="w-full h-full object-contain"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              />
+            ) : (
+              <motion.video
+                key={currentImageIndex}
+                src={`https://utfs.io/f/${project.image[currentImageIndex]}`}
+                className="w-full h-full object-contain"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                loop
+                autoPlay
+              />
+            )}
+          </AnimatePresence>
 
-        {project.image.length > 1 && (
+          {project.image.length > 1 && (
             <>
-            <Button
+              <Button
                 variant="ghost"
                 size="icon"
                 className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white opacity-0 group-hover:opacity-100 transition-opacity"
                 onClick={prevImage}
-            >
+              >
                 <ChevronLeft className="h-8 w-8" />
-            </Button>
-            <Button
+              </Button>
+              <Button
                 variant="ghost"
                 size="icon"
                 className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white opacity-0 group-hover:opacity-100 transition-opacity"
                 onClick={nextImage}
-            >
+              >
                 <ChevronRight className="h-8 w-8" />
-            </Button>
+              </Button>
             </>
-        )}
+          )}
         </div>
-
 
         <div className="p-6 space-y-6">
           <div>
