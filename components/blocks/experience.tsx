@@ -65,8 +65,7 @@ const Experience: React.FC<props> = ({ loaded, setLoaded }) => {
       id="experience"
     >
       <h1
-        className="text-4xl lg:text-7xl flex animate-bounce"
-        style={{ fontFamily: "GaMaamli, sans-serif" }}
+        className="text-4xl lg:text-7xl flex animate-bounce font-bold"
       >
         My &nbsp; <p className="text-[#ffd700]">Experience</p>
       </h1>

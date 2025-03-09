@@ -34,8 +34,7 @@ const Projects:React.FC<props> = ({loaded, setLoaded}) => {
       id="projects"
     >
       <h1
-        className="text-4xl lg:text-7xl flex animate-bounce"
-        style={{ fontFamily: "GaMaamli, sans-serif" }}
+        className="text-4xl lg:text-7xl flex animate-bounce font-bold"
       >
         My &nbsp; <p className="text-[#ffd700]">Projects</p>
       </h1>

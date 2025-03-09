@@ -10,7 +10,12 @@ interface Props {
   userId: string;
 }
 
-const Contact: React.FC<Props> = ({ loaded, serviceId, templateId, userId }) => {
+const Contact: React.FC<Props> = ({
+  loaded,
+  serviceId,
+  templateId,
+  userId,
+}) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -19,7 +24,6 @@ const Contact: React.FC<Props> = ({ loaded, serviceId, templateId, userId }) => 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSending(true);
-
 
     const templateParams = {
       name: name,
@@ -48,11 +52,8 @@ const Contact: React.FC<Props> = ({ loaded, serviceId, templateId, userId }) => 
       className="flex flex-col justify-center space-y-4 items-center w-full p-4 px-[30px] sm:px-[70px] pb-[100px]"
       id="contact"
     >
-      <h1
-        className="text-4xl lg:text-7xl flex mb-10 animate-bounce"
-        style={{ fontFamily: "GaMaamli, sans-serif" }}
-      >
-        Let Get in &nbsp; <p className="text-[#ffd700]">Touch</p>
+      <h1 className="text-4xl lg:text-7xl flex mb-10 font-bold text-gray-100 animate-bounce">
+        Let&apos;s Get in &nbsp; <p className="text-[#ffd700]">Touch</p>
       </h1>
 
       <form
@@ -60,7 +61,7 @@ const Contact: React.FC<Props> = ({ loaded, serviceId, templateId, userId }) => 
         onSubmit={handleSubmit}
       >
         <input
-          className="text-2xl bg-white text-black w-11/12 md:w-8/12 p-2 rounded-xl contact-form-btn"
+          className="text-2xl bg-gray-100 text-black w-11/12 md:w-8/12 p-2 rounded-xl contact-form-btn focus:ring-2 focus:ring-yellow-400"
           name="name"
           placeholder="Your Name"
           value={name}
@@ -69,7 +70,7 @@ const Contact: React.FC<Props> = ({ loaded, serviceId, templateId, userId }) => 
           required
         />
         <input
-          className="text-2xl bg-white text-black w-11/12 md:w-8/12 p-2 rounded-xl contact-form-btn"
+          className="text-2xl bg-gray-100 text-black w-11/12 md:w-8/12 p-2 rounded-xl contact-form-btn focus:ring-2 focus:ring-yellow-400"
           name="email"
           type="email"
           placeholder="Your Email"
@@ -79,7 +80,7 @@ const Contact: React.FC<Props> = ({ loaded, serviceId, templateId, userId }) => 
           required
         />
         <textarea
-          className="text-2xl bg-white text-black w-11/12 md:w-8/12 h-[200px] p-2 rounded-xl contact-form-btn"
+          className="text-2xl bg-gray-100 text-black w-11/12 md:w-8/12 h-[200px] p-2 rounded-xl contact-form-btn focus:ring-2 focus:ring-yellow-400"
           name="message"
           placeholder="Message"
           value={message}
@@ -88,7 +89,7 @@ const Contact: React.FC<Props> = ({ loaded, serviceId, templateId, userId }) => 
           required
         />
         <button
-          className="bg-pink-600 px-6 py-3 text-xl rounded-xl mt-3"
+          className="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-3 text-xl rounded-xl mt-3 transition-all duration-200"
           type="submit"
           disabled={sending}
         >

@@ -84,7 +84,6 @@ const TechStack: React.FC<props> = ({ loaded, setLoaded }) => {
       <motion.div variants={titleVariants} className="relative">
         <h1
           className="text-3xl lg:text-5xl flex flex-col md:flex-row items-center justify-center md:justify-start font-bold"
-          style={{ fontFamily: "Stylish, sans-serif" }}
         >
           My Tech &nbsp; <span className="text-[#ffd700]">Stack</span>
         </h1>

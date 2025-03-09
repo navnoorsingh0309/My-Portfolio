@@ -46,8 +46,7 @@ const About:React.FC<props> = ({loaded, setLoaded}) => {
       transition={{ duration: 0.8 }}
     >
       <motion.div
-        className="flex items-center gap-2 text-4xl lg:text-7xl"
-        style={{ fontFamily: "GaMaamli, sans-serif" }}
+        className="flex items-center gap-2 text-4xl lg:text-7xl font-bold"
         initial={{ y: -50 }}
         whileInView={{ y: 0 }}
         viewport={{ once: true }}
