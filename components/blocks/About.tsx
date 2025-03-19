@@ -80,7 +80,7 @@ const About:React.FC<props> = ({loaded, setLoaded}) => {
             transition={{ duration: 0.6 }}
           >
             <WobbleCard
-              containerClassName="col-span-1 bg-gradient-to-br from-pink-800 to-purple-900 lg:h-[400px] rounded-2xl shadow-xl"
+              containerClassName="col-span-1 bg-pink-800 to-purple-900 lg:h-[400px] rounded-2xl shadow-xl"
               className="p-6"
             >
               <div>
