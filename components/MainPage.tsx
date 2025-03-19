@@ -7,6 +7,7 @@ import TechStack from "@/components/blocks/Skills";
 import { useState } from "react";
 import LoadingScreen from "@/components/ui/LoadingScreen";
 import Experience from "@/components/blocks/experience";
+import Blogs from "./blocks/Blogs/Blogs";
 
 interface props {
     serviceID: string;
@@ -20,10 +21,11 @@ const MainPage:React.FC<props> = ({serviceID, templateID, userID}) => {
   const [loadedProjects, setProjectsLoaded] = useState(false);
   const [loadedTechStack, setTechLoaded] = useState(false);
   const [loadedExperience, setExperienceLoaded] = useState(false);
+  const [loadedBlogs, setBlogsLoaded] = useState(false);
   return (
     <>
       <LoadingScreen
-        loaded={loadedHero && loadedProjects && loadedTechStack && loadedAbout && loadedExperience}
+        loaded={loadedHero && loadedProjects && loadedTechStack && loadedAbout && loadedExperience && loadedBlogs}
       />
       <div className="flex flex-col justify-center space-y-0 h-full bg-blue-950/50">
         <div className="flex flex-col gap-2 w-full justify-center px-1 sm:px-10 bg-transparent text-center mx-auto items-center">
@@ -34,7 +36,8 @@ const MainPage:React.FC<props> = ({serviceID, templateID, userID}) => {
           <Projects loaded={loadedHero && loadedAbout && loadedProjects} setLoaded={setProjectsLoaded} />
           <TechStack loaded={loadedHero && loadedAbout && loadedProjects && loadedTechStack} setLoaded={setTechLoaded} />
           <Experience loaded={loadedHero && loadedAbout && loadedProjects && loadedTechStack && loadedExperience} setLoaded={setExperienceLoaded} />
-          <Contact loaded={loadedHero && loadedAbout && loadedProjects && loadedTechStack && loadedExperience}
+          <Blogs loaded={loadedHero && loadedAbout && loadedProjects && loadedTechStack && loadedExperience && loadedBlogs} setLoaded={setBlogsLoaded} />
+          <Contact loaded={loadedHero && loadedAbout && loadedProjects && loadedTechStack && loadedExperience && loadedBlogs}
                     serviceId={serviceID} templateId={templateID} userId={userID}/>
         </div>
       </div>
